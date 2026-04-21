@@ -22,7 +22,7 @@
             
             <!-- Book Details -->
             <div class="md:w-2/3 p-8">
-                <span class="text-indigo-600 text-sm font-medium">{{ $book->category->name }}</span>
+                <span class="text-brown-600 text-sm font-medium">{{ $book->category->name }}</span>
                 <h1 class="text-3xl font-bold text-gray-900 mt-2">{{ $book->title }}</h1>
                 <p class="text-xl text-gray-600 mt-1">by {{ $book->author }}</p>
                 
@@ -37,7 +37,7 @@
                     <span class="ml-2 text-gray-600">{{ number_format($book->average_rating, 1) }} ({{ $book->reviews->count() }} reviews)</span>
                 </div>
                 
-                <p class="text-3xl font-bold text-indigo-600 mt-4">${{ number_format($book->price, 2) }}</p>
+                <p class="text-3xl font-bold text-brown-600 mt-4">${{ number_format($book->price, 2) }}</p>
                 
                 <div class="mt-4">
                     <span class="text-sm {{ $book->stock_quantity > 0 ? 'text-green-600' : 'text-red-600' }}">
@@ -72,10 +72,10 @@
                                            value="1" 
                                            min="1" 
                                            max="{{ $book->stock_quantity }}"
-                                           class="w-20 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                                           class="w-20 border-gray-300 rounded-md shadow-sm focus:ring-brown-500 focus:border-brown-500">
                                 </div>
                                 <button type="submit" 
-                                        class="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 transition flex items-center">
+                                        class="bg-brown-600 text-white px-6 py-2 rounded-md hover:bg-brown-700 transition flex items-center">
                                     <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                                               d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -97,7 +97,7 @@
                     @endif
                 @else
                     <div class="mt-6 border-t pt-6">
-                        <a href="{{ route('login') }}" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                        <a href="{{ route('login') }}" class="text-brown-600 hover:text-brown-800 flex items-center">
                             <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                                       d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
@@ -143,7 +143,7 @@
                     
                     <div class="mb-4">
                         <label class="block text-gray-700 mb-2">Rating</label>
-                        <select name="rating" class="border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
+                        <select name="rating" class="border-gray-300 rounded-md shadow-sm focus:ring-brown-500 focus:border-brown-500" required>
                             <option value="">Select rating</option>
                             @for($i = 5; $i >= 1; $i--)
                                 <option value="{{ $i }}">{{ $i }} Star{{ $i > 1 ? 's' : '' }}</option>
@@ -154,18 +154,18 @@
                     <div class="mb-4">
                         <label class="block text-gray-700 mb-2">Comment</label>
                         <textarea name="comment" rows="4" 
-                                  class="w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+                                  class="w-full border-gray-300 rounded-md shadow-sm focus:ring-brown-500 focus:border-brown-500"
                                   placeholder="Share your thoughts about this book..."></textarea>
                     </div>
                     
-                    <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-indigo-700 transition">
+                    <button type="submit" class="bg-brown-600 text-white px-6 py-2 rounded hover:bg-brown-700 transition">
                         Submit Review
                     </button>
                 </form>
             </div>
         @else
             <x-alert type="info" class="mb-6">
-                <a href="{{ route('login') }}" class="text-indigo-600 hover:underline">Login</a> to write a review.
+                <a href="{{ route('login') }}" class="text-brown-600 hover:underline">Login</a> to write a review.
             </x-alert>
         @endauth
         

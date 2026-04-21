@@ -29,7 +29,7 @@
                         <td class="px-6 py-4 text-sm text-gray-900">
                             {{ $order->created_at->format('M d, Y') }}
                         </td>
-                        <td class="px-6 py-4 text-sm font-medium text-indigo-600">
+                        <td class="px-6 py-4 text-sm font-medium text-brown-600">
                             ${{ number_format($order->total_amount, 2) }}
                         </td>
                         <td class="px-6 py-4">
@@ -47,7 +47,7 @@
                         </td>
                         <td class="px-6 py-4 text-sm">
                             <a href="{{ route('orders.show', $order) }}" 
-                               class="text-indigo-600 hover:text-indigo-900">
+                               class="text-brown-600 hover:text-brown-900">
                                 View Details
                             </a>
                         </td>
@@ -62,7 +62,7 @@
         </div>
     @else
         <x-alert type="info">
-            You haven't placed any orders yet. <a href="{{ route('books.index') }}" class="text-indigo-600 hover:underline">Start shopping!</a>
+            You haven't placed any orders yet. <a href="{{ route('books.index') }}" class="text-brown-600 hover:underline">Start shopping!</a>
         </x-alert>
     @endif
 @endsection

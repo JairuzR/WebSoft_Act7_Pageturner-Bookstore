@@ -18,7 +18,7 @@
                            name="name" 
                            id="name" 
                            value="{{ old('name') }}"
-                           class="w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 @error('name') border-red-500 @enderror" 
+                           class="w-full border-gray-300 rounded-md shadow-sm focus:ring-brown-500 focus:border-brown-500 @error('name') border-red-500 @enderror" 
                            required>
                     @error('name')
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
@@ -30,7 +30,7 @@
                     <textarea name="description" 
                               id="description" 
                               rows="4"
-                              class="w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">{{ old('description') }}</textarea>
+                              class="w-full border-gray-300 rounded-md shadow-sm focus:ring-brown-500 focus:border-brown-500">{{ old('description') }}</textarea>
                 </div>
                 
                 <div class="flex justify-end space-x-4">
@@ -39,7 +39,7 @@
                         Cancel
                     </a>
                     <button type="submit" 
-                            class="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 transition">
+                            class="bg-brown-600 text-white px-6 py-2 rounded-md hover:bg-brown-700 transition">
                         Create Category
                     </button>
                 </div>

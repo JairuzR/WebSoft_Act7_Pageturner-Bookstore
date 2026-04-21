@@ -53,8 +53,8 @@
                                        value="{{ $item['quantity'] }}" 
                                        min="0" 
                                        max="{{ $item['book']->stock_quantity }}"
-                                       class="w-16 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-                                <button type="submit" class="text-indigo-600 hover:text-indigo-900 text-sm">
+                                       class="w-16 border-gray-300 rounded-md shadow-sm focus:ring-brown-500 focus:border-brown-500">
+                                <button type="submit" class="text-brown-600 hover:text-brown-900 text-sm">
                                     Update
                                 </button>
                             </form>
@@ -77,7 +77,7 @@
                         <td colspan="3" class="px-6 py-4 text-right font-medium text-gray-900">
                             Total:
                         </td>
-                        <td class="px-6 py-4 text-lg font-bold text-indigo-600">
+                        <td class="px-6 py-4 text-lg font-bold text-brown-600">
                             ${{ number_format($total, 2) }}
                         </td>
                         <td></td>
@@ -92,13 +92,13 @@
                 Continue Shopping
             </a>
             <a href="{{ route('orders.checkout') }}" 
-               class="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 transition">
+               class="bg-brown-600 text-white px-6 py-2 rounded-md hover:bg-brown-700 transition">
                 Proceed to Checkout
             </a>
         </div>
     @else
         <x-alert type="info">
-            Your cart is empty. <a href="{{ route('books.index') }}" class="text-indigo-600 hover:underline">Browse books</a> to add some items!
+            Your cart is empty. <a href="{{ route('books.index') }}" class="text-brown-600 hover:underline">Browse books</a> to add some items!
         </x-alert>
     @endif
 @endsection

@@ -1,4 +1,4 @@
-<nav class="bg-indigo-600 text-white shadow-lg">
+<nav class="bg-brown-600 text-white shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex items-center">
@@ -9,22 +9,28 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden md:flex ml-10 space-x-4">
-                    <a href="{{ route('home') }}" class="hover:bg-indigo-700 px-3 py-2 rounded-md">
+                    <a href="{{ route('home') }}" class="hover:bg-brown-700 px-3 py-2 rounded-md">
                         Home
                     </a>
-                    <a href="{{ route('books.index') }}" class="hover:bg-indigo-700 px-3 py-2 rounded-md">
+                    <a href="{{ route('books.index') }}" class="hover:bg-brown-700 px-3 py-2 rounded-md">
                         Books
                     </a>
-                    <a href="{{ route('categories.index') }}" class="hover:bg-indigo-700 px-3 py-2 rounded-md">
+                    <a href="{{ route('categories.index') }}" class="hover:bg-brown-700 px-3 py-2 rounded-md">
                         Categories
                     </a>
 
                     @auth
                         @if(auth()->user()->isAdmin())
-                            <a href="{{ route('admin.books.create') }}" class="hover:bg-indigo-700 px-3 py-2 rounded-md">
+                            <a href="{{ route('admin.books.create') }}" class="hover:bg-brown-700 px-3 py-2 rounded-md">
                                 Add Book
                             </a>
-                            <a href="{{ route('admin.categories.create') }}" class="hover:bg-indigo-700 px-3 py-2 rounded-md">
+                            <a href="{{ route('admin.data-portability') }}" class="hover:bg-brown-700 px-3 py-2 rounded-md">
+                                Data Portability
+                            </a>
+                            <a href="{{ route('admin.audit-logs.index') }}" class="hover:bg-brown-700 px-3 py-2 rounded-md">
+                                Audit Logs
+                            </a>
+                            <a href="{{ route('admin.categories.create') }}" class="hover:bg-brown-700 px-3 py-2 rounded-md">
                                 Add Category
                             </a>
                         @endif
@@ -35,28 +41,28 @@
             <!-- Right Side -->
             <div class="flex items-center space-x-4">
                 @guest
-                    <a href="{{ route('login') }}" class="hover:bg-indigo-700 px-3 py-2 rounded-md">
+                    <a href="{{ route('login') }}" class="hover:bg-brown-700 px-3 py-2 rounded-md">
                         Login
                     </a>
-                    <a href="{{ route('register') }}" class="bg-white text-indigo-600 px-4 py-2 rounded-md font-medium">
+                    <a href="{{ route('register') }}" class="bg-white text-brown-600 px-4 py-2 rounded-md font-medium">
                         Register
                     </a>
                 @endguest
 
                 @auth
-                    <!-- Dashboard Link (NEW) -->
+                    <!-- Dashboard Link -->
                     @if(auth()->user()->isAdmin())
-                        <a href="{{ route('admin.dashboard') }}" class="hover:bg-indigo-700 px-3 py-2 rounded-md">
+                        <a href="{{ route('admin.dashboard') }}" class="hover:bg-brown-700 px-3 py-2 rounded-md">
                             Dashboard
                         </a>
                     @else
-                        <a href="{{ route('user.dashboard') }}" class="hover:bg-indigo-700 px-3 py-2 rounded-md">
+                        <a href="{{ route('user.dashboard') }}" class="hover:bg-brown-700 px-3 py-2 rounded-md">
                             Dashboard
                         </a>
                     @endif
 
                     <!-- Cart Icon with Counter -->
-                    <a href="{{ route('orders.cart') }}" class="hover:bg-indigo-700 px-3 py-2 rounded-md flex items-center relative">
+                    <a href="{{ route('orders.cart') }}" class="hover:bg-brown-700 px-3 py-2 rounded-md flex items-center relative">
                         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                                 d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -73,11 +79,11 @@
                         @endif
                     </a>
                     
-                    <a href="{{ route('orders.index') }}" class="hover:bg-indigo-700 px-3 py-2 rounded-md">
+                    <a href="{{ route('orders.index') }}" class="hover:bg-brown-700 px-3 py-2 rounded-md">
                         My Orders
                     </a>
                     
-                    <!-- Security Indicator (NEW) -->
+                    <!-- Security Indicator -->
                     @if(auth()->user()->hasTwoFactorEnabled())
                         <span class="text-green-300" title="2FA Enabled">
                             <svg class="h-5 w-5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -87,11 +93,11 @@
                         </span>
                     @endif
                     
-                    <span class="text-indigo-200">{{ auth()->user()->name }}</span>
+                    <span class="text-brown-200">{{ auth()->user()->name }}</span>
 
                     <form method="POST" action="{{ route('logout') }}" class="inline">
                         @csrf
-                        <button type="submit" class="hover:bg-indigo-700 px-3 py-2 rounded-md">
+                        <button type="submit" class="hover:bg-brown-700 px-3 py-2 rounded-md">
                             Logout
                         </button>
                     </form>

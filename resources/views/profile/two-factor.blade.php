@@ -56,7 +56,7 @@
             </p>
 
             <a href="{{ route('two-factor.enable') }}" 
-               class="inline-block bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition">
+               class="inline-block bg-brown-600 text-white px-4 py-2 rounded-md hover:bg-brown-700 transition">
                 Enable Two-Factor Authentication
             </a>
         @endif

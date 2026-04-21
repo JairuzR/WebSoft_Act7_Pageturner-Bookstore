@@ -25,7 +25,7 @@
                     
                     <div class="flex justify-between items-center pt-2">
                         <p class="text-lg font-bold">Total</p>
-                        <p class="text-xl font-bold text-indigo-600">${{ number_format($total, 2) }}</p>
+                        <p class="text-xl font-bold text-brown-600">${{ number_format($total, 2) }}</p>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                         <textarea name="shipping_address" 
                                   id="shipping_address" 
                                   rows="3"
-                                  class="w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+                                  class="w-full border-gray-300 rounded-md shadow-sm focus:ring-brown-500 focus:border-brown-500"
                                   required>{{ old('shipping_address') }}</textarea>
                     </div>
                     
@@ -55,7 +55,7 @@
                         </label>
                         <select name="payment_method" 
                                 id="payment_method"
-                                class="w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+                                class="w-full border-gray-300 rounded-md shadow-sm focus:ring-brown-500 focus:border-brown-500"
                                 required>
                             <option value="">Select payment method</option>
                             <option value="credit_card" {{ old('payment_method') == 'credit_card' ? 'selected' : '' }}>Credit Card</option>
@@ -71,7 +71,7 @@
                     </div>
                     
                     <button type="submit" 
-                            class="w-full bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                            class="w-full bg-brown-600 text-white px-4 py-2 rounded-md hover:bg-brown-700 transition">
                         Place Order
                     </button>
                     

@@ -11,7 +11,7 @@
         @if(auth()->user()->isAdmin())
             <div class="mb-6">
                 <a href="{{ route('admin.categories.create') }}" 
-                   class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                   class="bg-brown-600 text-white px-4 py-2 rounded-md hover:bg-brown-700 transition">
                     Add New Category
                 </a>
             </div>
@@ -23,15 +23,15 @@
             <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div class="p-6">
                     <h2 class="text-xl font-semibold text-gray-800 mb-2">
-                        <a href="{{ route('categories.show', $category) }}" class="hover:text-indigo-600">
+                        <a href="{{ route('categories.show', $category) }}" class="hover:text-brown-600">
                             {{ $category->name }}
                         </a>
                     </h2>
                     <p class="text-gray-600 mb-4">{{ Str::limit($category->description, 100) }}</p>
                     <div class="flex justify-between items-center">
-                        <span class="text-indigo-600 font-medium">{{ $category->books_count }} books</span>
+                        <span class="text-brown-600 font-medium">{{ $category->books_count }} books</span>
                         <a href="{{ route('categories.show', $category) }}" 
-                           class="text-indigo-600 hover:text-indigo-800">
+                           class="text-brown-600 hover:text-brown-800">
                             Browse Books →
                         </a>
                     </div>

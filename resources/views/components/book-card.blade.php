@@ -15,7 +15,7 @@
     <div class="p-4">
         <h3 class="font-semibold text-lg text-gray-800 truncate">{{ $book->title }}</h3>
         <p class="text-gray-600 text-sm">by {{ $book->author }}</p>
-        <p class="text-indigo-600 font-bold mt-2">${{ number_format($book->price, 2) }}</p>
+        <p class="text-brown-600 font-bold mt-2">${{ number_format($book->price, 2) }}</p>
         
         <!-- Star Rating -->
         <div class="flex items-center mt-2">
@@ -34,7 +34,7 @@
         </div>
         
         <a href="{{ route('books.show', $book) }}" 
-           class="mt-4 block text-center bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">
+           class="mt-4 block text-center bg-brown-600 text-white py-2 rounded hover:bg-brown-700 transition">
             View Details
         </a>
     </div>

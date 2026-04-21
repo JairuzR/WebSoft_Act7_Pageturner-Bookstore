@@ -7,7 +7,7 @@
     <div class="max-w-md w-full bg-white rounded-lg shadow-lg p-8">
         <div class="text-center">
             <!-- Shield Icon -->
-            <svg class="mx-auto h-16 w-16 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="mx-auto h-16 w-16 text-brown-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                       d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
@@ -34,13 +34,13 @@
                     <input type="text" 
                            name="code" 
                            id="code"
-                           class="w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
+                           class="w-full border-gray-300 rounded-md shadow-sm focus:ring-brown-500 focus:border-brown-500"
                            placeholder="000000"
                            required>
                 </div>
 
                 <button type="submit" 
-                        class="w-full bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition">
+                        class="w-full bg-brown-600 text-white px-4 py-2 rounded-md hover:bg-brown-700 transition">
                     Verify
                 </button>
             </form>

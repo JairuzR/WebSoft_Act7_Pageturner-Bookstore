@@ -15,7 +15,7 @@
                 <div class="mb-4">
                     <label for="title" class="block text-gray-700 font-medium mb-2">Title *</label>
                     <input type="text" name="title" id="title" value="{{ old('title') }}" 
-                           class="w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 @error('title') border-red-500 @enderror" 
+                           class="w-full border-gray-300 rounded-md shadow-sm focus:ring-brown-500 focus:border-brown-500 @error('title') border-red-500 @enderror" 
                            required>
                     @error('title')
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
@@ -25,14 +25,14 @@
                 <div class="mb-4">
                     <label for="author" class="block text-gray-700 font-medium mb-2">Author *</label>
                     <input type="text" name="author" id="author" value="{{ old('author') }}" 
-                           class="w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" 
+                           class="w-full border-gray-300 rounded-md shadow-sm focus:ring-brown-500 focus:border-brown-500" 
                            required>
                 </div>
                 
                 <div class="mb-4">
                     <label for="category_id" class="block text-gray-700 font-medium mb-2">Category *</label>
                     <select name="category_id" id="category_id" 
-                            class="w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" 
+                            class="w-full border-gray-300 rounded-md shadow-sm focus:ring-brown-500 focus:border-brown-500" 
                             required>
                         <option value="">Select a category</option>
                         @foreach($categories as $category)
@@ -47,14 +47,14 @@
                     <div>
                         <label for="isbn" class="block text-gray-700 font-medium mb-2">ISBN *</label>
                         <input type="text" name="isbn" id="isbn" value="{{ old('isbn') }}" 
-                               class="w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" 
+                               class="w-full border-gray-300 rounded-md shadow-sm focus:ring-brown-500 focus:border-brown-500" 
                                required>
                     </div>
                     
                     <div>
                         <label for="price" class="block text-gray-700 font-medium mb-2">Price ($) *</label>
                         <input type="number" step="0.01" name="price" id="price" value="{{ old('price') }}" 
-                               class="w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" 
+                               class="w-full border-gray-300 rounded-md shadow-sm focus:ring-brown-500 focus:border-brown-500" 
                                required>
                     </div>
                 </div>
@@ -62,14 +62,14 @@
                 <div class="mb-4">
                     <label for="stock_quantity" class="block text-gray-700 font-medium mb-2">Stock Quantity *</label>
                     <input type="number" name="stock_quantity" id="stock_quantity" value="{{ old('stock_quantity', 0) }}" 
-                           class="w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" 
+                           class="w-full border-gray-300 rounded-md shadow-sm focus:ring-brown-500 focus:border-brown-500" 
                            required>
                 </div>
                 
                 <div class="mb-4">
                     <label for="description" class="block text-gray-700 font-medium mb-2">Description</label>
                     <textarea name="description" id="description" rows="4" 
-                              class="w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">{{ old('description') }}</textarea>
+                              class="w-full border-gray-300 rounded-md shadow-sm focus:ring-brown-500 focus:border-brown-500">{{ old('description') }}</textarea>
                 </div>
                 
                 <div class="mb-6">
@@ -84,7 +84,7 @@
                        class="bg-gray-300 text-gray-700 px-6 py-2 rounded hover:bg-gray-400 transition">
                         Cancel
                     </a>
-                    <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition">
+                    <button type="submit" class="bg-brown-600 text-white px-6 py-2 rounded hover:bg-brown-700 transition">
                         Add Book
                     </button>
                 </div>

@@ -36,7 +36,7 @@
                     </span>
                 </p>
                 <p class="text-gray-600">Shipping Address: {{ $order->shipping_address }}</p>
-                <p class="text-gray-600">Total Amount: <span class="font-bold text-indigo-600">${{ number_format($order->total_amount, 2) }}</span></p>
+                <p class="text-gray-600">Total Amount: <span class="font-bold text-brown-600">${{ number_format($order->total_amount, 2) }}</span></p>
             </div>
             
             <div>
@@ -80,7 +80,7 @@
                     <td class="px-6 py-4 text-sm text-gray-900">
                         {{ $item->quantity }}
                     </td>
-                    <td class="px-6 py-4 text-sm font-medium text-indigo-600">
+                    <td class="px-6 py-4 text-sm font-medium text-brown-600">
                         ${{ number_format($item->subtotal, 2) }}
                     </td>
                 </tr>
@@ -91,7 +91,7 @@
                     <td colspan="3" class="px-6 py-4 text-right font-medium text-gray-900">
                         Total:
                     </td>
-                    <td class="px-6 py-4 text-lg font-bold text-indigo-600">
+                    <td class="px-6 py-4 text-lg font-bold text-brown-600">
                         ${{ number_format($order->total_amount, 2) }}
                     </td>
                 </tr>
@@ -100,7 +100,7 @@
     </div>
     
     <div class="mt-6">
-        <a href="{{ route('orders.index') }}" class="text-indigo-600 hover:text-indigo-900">
+        <a href="{{ route('orders.index') }}" class="text-brown-600 hover:text-brown-900">
             ← Back to My Orders
         </a>
     </div>

@@ -10,6 +10,9 @@ use App\Http\Controllers\TwoFactorController;
 use App\Http\Controllers\UserDashboardController;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\DataPortabilityController;
+use App\Http\Controllers\Admin\AuditLogController;
+use Maatwebsite\Excel\Facades\Excel;
 
 // Public routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -54,6 +57,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/test-export', function () {
+    return Excel::download(new \App\Exports\BooksExport, 'books.xlsx');
+})->middleware(['auth', 'admin']);
 
     // Cart routes
     Route::get('/cart', [OrderController::class, 'cart'])->name('orders.cart');
@@ -81,6 +87,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
 Route::middleware(['auth', 'verified', 'admin'])->prefix('admin')->name('admin.')->group(function () {
     // Admin Dashboard
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+    Route::get('/test-export', function () {
+    return Excel::download(new \App\Exports\BooksExport, 'books.xlsx');
+})->middleware(['auth', 'admin']);
     
     // Category management
     Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
@@ -99,6 +108,16 @@ Route::middleware(['auth', 'verified', 'admin'])->prefix('admin')->name('admin.'
     // Admin order management
     Route::get('/orders', [OrderController::class, 'adminIndex'])->name('orders.admin');
     Route::patch('/orders/{order}/status', [OrderController::class, 'updateStatus'])->name('orders.status');
+
+    // Data Portability (Import/Export)
+    Route::get('/data-portability', [DataPortabilityController::class, 'index'])->name('data-portability');
+    Route::post('/import', [DataPortabilityController::class, 'import'])->name('import');
+    Route::get('/export', [DataPortabilityController::class, 'export'])->name('export');
+    Route::get('/template', [DataPortabilityController::class, 'template'])->name('template');
+
+    // Audit Logs
+    Route::get('/audit-logs', [AuditLogController::class, 'index'])->name('audit-logs.index');
+    Route::get('/audit-logs/{audit}', [AuditLogController::class, 'show'])->name('audit-logs.show');
 });
 
 require __DIR__.'/auth.php';

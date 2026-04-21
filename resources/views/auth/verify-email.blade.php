@@ -7,7 +7,7 @@
     <div class="max-w-md w-full bg-white rounded-lg shadow-lg p-8">
         <div class="text-center">
             <!-- Email Icon -->
-            <svg class="mx-auto h-16 w-16 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="mx-auto h-16 w-16 text-brown-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
@@ -28,7 +28,7 @@
                 <form method="POST" action="{{ route('verification.send') }}">
                     @csrf
                     <button type="submit" 
-                            class="w-full bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition">
+                            class="w-full bg-brown-600 text-white px-4 py-2 rounded-md hover:bg-brown-700 transition">
                         Resend Verification Email
                     </button>
                 </form>

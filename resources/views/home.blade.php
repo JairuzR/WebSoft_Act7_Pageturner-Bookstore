@@ -4,11 +4,11 @@
 
 @section('content')
     <!-- Hero Section -->
-    <div class="bg-indigo-700 text-white rounded-lg p-8 mb-8">
+    <div class="bg-brown-700 text-white rounded-lg p-8 mb-8">
         <h1 class="text-4xl font-bold mb-4">Welcome to PageTurner</h1>
-        <p class="text-xl text-indigo-200 mb-6">Discover your next favorite book from our extensive collection.</p>
+        <p class="text-xl text-brown-200 mb-6">Discover your next favorite book from our extensive collection.</p>
         <a href="{{ route('books.index') }}" 
-           class="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-100 transition">
+           class="bg-white text-brown-700 px-6 py-3 rounded-lg font-semibold hover:bg-brown-100 transition">
             Browse Books
         </a>
     </div>
