@@ -116,26 +116,26 @@ Key Features Verified:
 
 
 Screenshots:
-Terminal showing 1M books seeded (or count)
+Terminal showing 1M books seeded (or count):
 <img width="551" height="86" alt="1" src="https://github.com/user-attachments/assets/dd04ab37-177d-4d3a-9261-8253546cceea" />
 
-Redis cache tagging working
+Redis cache tagging working:
 <img width="334" height="44" alt="2" src="https://github.com/user-attachments/assets/5a051f04-c797-472d-9787-5afa2f1a148d" />
 
-Scout full‑text search results
+Scout full‑text search results:
 <img width="251" height="647" alt="3" src="https://github.com/user-attachments/assets/8dc988e6-2c7c-4263-8c1b-f00ea5139bb7" />
 
-Benchmark command output
+Benchmark command output:
 <img width="501" height="325" alt="4" src="https://github.com/user-attachments/assets/3f35dee8-bd58-4658-9b2e-dd5642bf6c59" />
 
-Materialized view refresh
+Materialized view refresh:
 <img width="496" height="36" alt="5" src="https://github.com/user-attachments/assets/00b32a6d-6116-4603-aba1-377abb1daf50" />
 
-Database index list
+Database index list:
 <img width="274" height="673" alt="6" src="https://github.com/user-attachments/assets/a4c3357b-994b-431b-ad8d-9a39b60f46cb" />
 
-Read/write splitting config
+Read/write splitting config:
 <img width="315" height="162" alt="7" src="https://github.com/user-attachments/assets/6e520644-e67c-4639-9bd6-38a1d5e68b55" />
 
-Partitioning migration (code proof)
+Partitioning migration (code proof):
 <img width="749" height="245" alt="8" src="https://github.com/user-attachments/assets/6801320e-456e-4df1-ac00-087b3836f567" />
