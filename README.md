@@ -116,7 +116,7 @@ Key Features Verified:
 
 
 Screenshots:
-Terminal showing 1M books seeded (or count):
+Terminal showing 1M books seeded:
 <img width="551" height="86" alt="1" src="https://github.com/user-attachments/assets/dd04ab37-177d-4d3a-9261-8253546cceea" />
 
 Redis cache tagging working:
@@ -137,5 +137,5 @@ Database index list:
 Read/write splitting config:
 <img width="315" height="162" alt="7" src="https://github.com/user-attachments/assets/6e520644-e67c-4639-9bd6-38a1d5e68b55" />
 
-Partitioning migration (code proof):
+Partitioning migration:
 <img width="749" height="245" alt="8" src="https://github.com/user-attachments/assets/6801320e-456e-4df1-ac00-087b3836f567" />
